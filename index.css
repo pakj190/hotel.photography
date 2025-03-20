@@ -57,7 +57,7 @@ header {
 }
 
 .maincol {
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row: 2/3;
 
     /* Styling */
@@ -66,24 +66,34 @@ header {
     height: 20rem;
 }
 
-.sidecol2 {
-    grid-column: 3/4;
-    grid-row: 2/3;
-
-    /* Styling */
-    background-color: pink;
-    padding: 2em;
-}
-
 footer {
-    grid-column: 3/4;
+    grid-column: 1/4;
     grid-row: 3/4;
 
     /* Styling */
     background-color: purple;
     padding: 2em;
+
+    align-items: center;
+    text-align: center;
 }
 
+ol {
+    list-style-type: none; /* Removes numbers or bullets */
+    padding-left: 0; /* Optional: Removes indentation */
+    font-size: 20px;
+    line-height: 30px;
+    color: gray;
+}
+
+ol li a {
+    text-decoration: none; /* Removes the underline */
+    color: gray; /* Sets the text color to gray */
+}
+
+ol li a:hover {
+    color: black; /* Changes the text color to black on hover */
+}
 
 @media screen and (max-width: 500px) {
     .envelope {
@@ -96,18 +106,8 @@ footer {
         grid-row: auto;
     }
 
-    .sidecol {
-        grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
-        grid-row: auto;
-    }
-
     .maincol {
         grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
-        grid-row: auto;
-    }
-
-    .sidecol2 {
-        grid-column: auto; /* In this case, both 1/1 or auto will be the same */
         grid-row: auto;
     }
 
