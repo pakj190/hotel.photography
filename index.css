@@ -1,0 +1,118 @@
+body {
+    color: rgb(52, 52, 52);
+    background-color: rgb(221, 221, 221);
+    font-family: "Crimson Pro", serif;
+}
+
+h1 {
+    font-family: "Crimson Pro", serif;
+    font-size: 100px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: "Crimson Pro", serif;
+    font-size: 60px;
+    margin-left: 20px;
+    margin-top: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.envelope {
+    width: 100%;
+    background-color: yellow;
+    /* height: 100vh; If we don't specify this, then the height will be whatever height the content is */
+
+    /* The Magic */
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    /* Technically don't need rows. If you keep adding rows, it will expand automatically. Rows gives you additional power */
+    /* See an excellent tutorial: https://www.joshwcomeau.com/css/interactive-guide-to-grid/ */
+    grid-template-rows: auto auto auto; /* auto is shy; fr is greedy: auto will be whatever the inside content height is */
+    /* If you try auto 1fr 3fr  which means: content-determined-height A; content-determined-height B; 3 x content-determined-height B; */
+    /* fr simply means that there is a reserved space for content; it is not afraid to break visual proportions */
+}
+
+header {
+    grid-column: 1/4; /* Our grid has 3 columns: 1|  2|  3|  4|  and thus, 4 divider lines */
+    /* 1/4 means that this element spans from the first line to the fourth line */
+    /* Styling */
+    background-color: red;
+    padding: 2em;
+}
+
+.sidecol {
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    /* Styling */
+    background-color: green;
+    padding: 2em;
+}
+
+.maincol {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    /* Styling */
+    background-color: blue;
+    padding: 2em;
+    height: 20rem;
+}
+
+.sidecol2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    /* Styling */
+    background-color: pink;
+    padding: 2em;
+}
+
+footer {
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+    /* Styling */
+    background-color: purple;
+    padding: 2em;
+}
+
+
+@media screen and (max-width: 500px) {
+    .envelope {
+        grid-template-columns: 100%;
+        grid-template-rows: auto; 
+    }
+
+    header {
+        grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
+        grid-row: auto;
+    }
+
+    .sidecol {
+        grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
+        grid-row: auto;
+    }
+
+    .maincol {
+        grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
+        grid-row: auto;
+    }
+
+    .sidecol2 {
+        grid-column: auto; /* In this case, both 1/1 or auto will be the same */
+        grid-row: auto;
+    }
+
+    footer {
+        grid-column: auto; /* In this case, both 1/1 or auto will be the same */
+        grid-row: auto;
+    }
+}
