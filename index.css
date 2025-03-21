@@ -1,178 +1,52 @@
-body {
-    color: rgb(52, 52, 52);
-    background-color: rgb(221, 221, 221);
-    font-family: "Crimson Pro", serif;
-}
-
-h1 {
-    font-family: "Radley", serif;
-    font-size: 100px;
-    margin-left: 20px;
-    letter-spacing: 5px;
-}
-
-h2 {
-    font-family: "Crimson Pro", serif;
-    font-size: 60px;
-    margin-left: 20px;
-    margin-top: 4px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.envelope {
-    width: 100%;
-    background-color: yellow;
-    /* height: 100vh; If we don't specify this, then the height will be whatever height the content is */
-
-    /* The Magic */
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    /* Technically don't need rows. If you keep adding rows, it will expand automatically. Rows gives you additional power */
-    /* See an excellent tutorial: https://www.joshwcomeau.com/css/interactive-guide-to-grid/ */
-    grid-template-rows: auto auto auto; /* auto is shy; fr is greedy: auto will be whatever the inside content height is */
-    /* If you try auto 1fr 3fr  which means: content-determined-height A; content-determined-height B; 3 x content-determined-height B; */
-    /* fr simply means that there is a reserved space for content; it is not afraid to break visual proportions */
-}
-
-header {
-    grid-column: 1/4; /* Our grid has 3 columns: 1|  2|  3|  4|  and thus, 4 divider lines */
-    /* 1/4 means that this element spans from the first line to the fourth line */
-    /* Styling */
-    background-color: red;
-    padding: 2em;
-}
-
-.sidecol {
-    grid-column: 1/2;
-    grid-row: 2/3;
-
-    /* Styling */
-    background-color: green;
-    padding: 2em;
-}
-
-.maincol {
-    grid-column: 2/4;
-    grid-row: 2/3;
-
-    /* Styling */
-    background-color: blue;
-    padding: 2em;
-    height: 20rem;
-}
-
-footer {
-    grid-column: 1/4;
-    grid-row: 3/4;
-
-    /* Styling */
-    background-color: purple;
-    padding: 2em;
-
-    align-items: center;
-    text-align: center;
-}
-
-ol {
-    list-style-type: none; /* Removes numbers or bullets */
-    padding-left: 0; /* Optional: Removes indentation */
-    font-size: 20px;
-    line-height: 30px;
-    color: gray;
-}
-
-ol li a {
-    text-decoration: none; /* Removes the underline */
-    color: gray; /* Sets the text color to gray */
-}
-
-ol li a:hover {
-    color: black; /* Changes the text color to black on hover */
-}
-
-@media screen and (max-width: 500px) {
-    .envelope {
-        grid-template-columns: 100%;
-        grid-template-rows: auto; 
-    }
-
-    header {
-        grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
-        grid-row: auto;
-    }
-
-    .maincol {
-        grid-column: 1/1; /* In this case, both 1/1 or auto will be the same */
-        grid-row: auto;
-    }
-
-    footer {
-        grid-column: auto; /* In this case, both 1/1 or auto will be the same */
-        grid-row: auto;
-    }
-}
-
-
-        /* Basic Styles */
-        body {
-            font-family: "Crimson Pro", sans-serif;
-        }
-
-        .w3-sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: -250px;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 20px;
-        }
-
-        .w3-sidebar a {
-            padding: 8px 16px;
-            text-decoration: none;
-            font-size: 25px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .w3-sidebar a:hover {
-            background-color: #575757;
-        }
-
-        .w3-main {
-            transition: margin-left 0.3s;
-            padding: 16px;
-        }
-
-        .w3-button.w3-teal {
-            font-size: 30px;
-            padding: 10px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        /* Hide the hamburger icon when sidebar is open */
-        .w3-button.w3-teal.hide {
-            display: none;
-        }
-
-        .w3-sidebar.open {
-            left: 0;
-        }
-
-        /* For responsiveness: when the screen is small, make the sidebar narrower */
-        @media screen and (max-width: 600px) {
-            .w3-sidebar {
-                width: 200px;
-            }
-        }
+/* Sidebar styles */
+.w3-sidebar {
+    height: 100%; /* Full-height sidebar */
+    width: 250px; /* Sidebar width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    background-color: #333; /* Dark gray background */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    padding-top: 20px; /* Top padding for better alignment */
+    display: none; /* Hidden by default */
+    transition: 0.5s; /* Smooth transition for opening/closing */
+  }
+  
+  .w3-bar-item {
+    padding: 8px 16px; /* Padding around the items */
+    text-align: left; /* Left-align text */
+    font-size: 18px; /* Font size for readability */
+    color: white; /* White font color */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make each item a block-level element */
+  }
+  
+  .w3-bar-item:hover {
+    background-color: #575757; /* Darker gray on hover */
+  }
+  
+  /* Style for the close button */
+  .w3-button.w3-teal.w3-xlarge {
+    color: white; /* White color for the button */
+    background-color: #333; /* Dark gray background for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Page Content */
+  .w3-teal {
+    background-color: #008C8C; /* Teal background for page header */
+    padding: 20px;
+  }
+  
+  .w3-container {
+    margin-left: 250px; /* Adjust content to make space for sidebar */
+    padding: 20px;
+  }
+  
+  /* Close button styles when sidebar is open */
+  .w3-bar-item.w3-button {
+    padding: 15px;
+  }
+  
+  
