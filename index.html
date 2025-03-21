@@ -1,46 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Flip</title>
+    <title>Joanna Pak</title>
 
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet">
+
     <style>
-        /* Add styles here for the card flip effect */
+        /* Add custom styles for the sidebar */
+        body {
+            font-family: "Crimson Pro", sans-serif;
+        }
+
+        .w3-sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hide the sidebar */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .w3-sidebar a {
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .w3-sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .w3-sidebar .w3-bar-item {
+            padding: 16px;
+        }
+
+        .w3-main {
+            transition: margin-left 0.3s;
+            padding: 16px;
+        }
+
+        /* Button to toggle the sidebar */
+        .w3-button.w3-teal {
+            font-size: 30px;
+            padding: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Make the sidebar visible when open */
+        .w3-sidebar.open {
+            left: 0;
+        }
+
+        /* For responsiveness: when the screen is small, make the sidebar narrower */
+        @media screen and (max-width: 600px) {
+            .w3-sidebar {
+                width: 200px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="envelope">
-        <header>
-            <h1>Joanna Pak</h1>
-        </header>
-        <!-- We've simplifed and removed the section to demonstrate grid's power -->
-        <div class="sidecol">
 
-            <ol>
-                <li><a href="travel/travel.html" target="_blank">Travel</a></li>
-                <li><a href="studio/studio.html" target="_blank">Studio</a></li>
-                <li><a href="product/product.html" target="_blank">Product</a></li>
-                <li><a href="event/event.html" target="_blank">Product</a></li>
-                <li><a href="food/food.html" target="_blank">Product</a></li>
-                <li><a href="sports/sports.html" target="_blank">Product</a></li>
-            </ol>
-
-        
-        </div>
-        <div class="maincol">
-            This is the main column.
-        </div>
-
-        <footer>
-            <p>Find me at ___</p>
-        </footer>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
     </div>
-</body>
-</html>
 
+    <!-- Page Content -->
+    <div class="w3-main" style="margin-left: 250px;">
+        <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+                <h1>JOANNA PAK</h1>
+            </div>
+        </div>
+        <!-- Your main content can go here -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").classList.add("open");
+            document.querySelector(".w3-main").style.marginLeft = "250px"; // Adjust content margin
+            document.getElementById("toggleBtn").classList.add("hide"); // Hide the toggle button when sidebar is open
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").classList.remove("open");
+            document.querySelector(".w3-main").style.marginLeft = "0"; // Reset content margin
+            document.getElementById("toggleBtn").classList.remove("hide"); // Show the toggle button when sidebar is closed
+        }
+    </script>
+
+</body>
+
+</html>
