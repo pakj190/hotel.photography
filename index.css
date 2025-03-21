@@ -22,25 +22,26 @@
   }
   
   .w3-bar-item:hover {
-    background-color: #575757; /* Darker gray on hover */
+    background-color: #414141; /* Darker gray on hover */
+    border: none;
   }
   
   /* Style for the close button */
   .w3-button.w3-teal.w3-xlarge {
     color: white; /* White color for the button */
-    background-color: #333; /* Dark gray background for the button */
+    background-color: #545454; /* Dark gray background for the button */
     border: none; /* Remove border */
     cursor: pointer; /* Pointer cursor on hover */
   }
   
   /* Page Content */
   .w3-teal {
-    background-color: #008C8C; /* Teal background for page header */
+    background-color: #b3b3b3; 
     padding: 20px;
   }
   
   .w3-container {
-    margin-left: 250px; /* Adjust content to make space for sidebar */
+    margin-left: 20px; /* Adjust content to make space for sidebar */
     padding: 20px;
   }
   
