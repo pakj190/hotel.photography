@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="index.css">
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>W3.CSS</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button">Socials</a>
-  <a href="#" class="w3-bar-item w3-button">Art Portfolio</a>
-  <a href="#" class="w3-bar-item w3-button">Contact Me</a>
-</div>
+  <body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <ul class="sidebar-tabs">
+        <li><a href="photography/photography.html">Photography</a></li>
+        <li><a href="art-portfolio/art-portfolio.html">Art Portfolio</a></li>
+        <li><a href="socials/socials.html">Socials</a></li>
+        <li><a href="contact/contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+    
 
-<!-- Page Content -->
-<div class="w3-teal">
-  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-  <div class="w3-container">
-    <h1>JOANNA PAK</h1>
-  </div>
-</div>
+    <!-- Page Content -->
+    <div class="w3-teal">
+      <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+      <div class="w3-container">
+        <h1>JOANNA PAK</h1>
+      </div>
+    </div>
 
-<div class="w3-container">
-<p>This sidebar is hidden by default, (style="display:none")</p>
-<p>You must click on the "hamburger" icon (top left) to open it.</p>
-<p>The sidebar will hide a part of the page content.</p>
-</div>
+    <div class="w3-container">
+      <p>This sidebar is hidden by default, (style="display:none")</p>
+      <p>You must click on the "hamburger" icon (top left) to open it.</p>
+      <p>The sidebar will hide a part of the page content.</p>
+    </div>
 
-<script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
+    <div class="pic-ctn">
+      <img src="https://picsum.photos/200/300?t=1" alt="" class="pic">
+      <img src="https://picsum.photos/200/300?t=2" alt="" class="pic">
+      <img src="https://picsum.photos/200/300?t=3" alt="" class="pic">
+      <img src="https://picsum.photos/200/300?t=4" alt="" class="pic">
+      <img src="https://picsum.photos/200/300?t=5" alt="" class="pic">
+    </div>
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-     
-</body>
-</html> 
+    <!-- JavaScript to control sidebar -->
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

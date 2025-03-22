@@ -1,53 +1,141 @@
-/* Sidebar styles */
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.w3-teal {
+  background-color: #5d5d5d; /* You can change this if you want a different header color */
+  color: white;
+}
+
+.w3-container {
+  padding: 20px;
+}
+
+/* Sidebar Styling */
 .w3-sidebar {
-    height: 100%; /* Full-height sidebar */
-    width: 250px; /* Sidebar width */
-    position: fixed; /* Fixed position */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    background-color: #333; /* Dark gray background */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    padding-top: 20px; /* Top padding for better alignment */
-    display: none; /* Hidden by default */
-    transition: 0.5s; /* Smooth transition for opening/closing */
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333; /* Dark gray background */
+  color: white; /* White text color */
+  display: none; /* Sidebar is hidden by default */
+  transition: transform 0.3s ease-in-out; /* Smooth transition when opening/closing */
+}
+
+.w3-bar-item {
+  padding: 10px;
+  color: rgb(189, 189, 189); /* Ensure the text color is white */
+  border: none;
+  color: black;
+}
+
+.w3-bar-item:hover {
+  background-color: #6b0079; /* Darker shade on hover */
+  border: none;
+  color: white;
+}
+
+/* Sidebar Button */
+.w3-button {
+  background-color: #8e8e8e; /* Teal color for buttons */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+
+.w3-button:hover {
+  background-color: #6b0079; /* Darker teal on hover */
+}
+
+.w3-xlarge {
+  font-size: 30px;
+}
+
+/* Sidebar tabs */
+.sidebar-tabs {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-tabs li {
+  padding: 12px;
+  text-align: left;
+}
+
+.sidebar-tabs li a {
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.sidebar-tabs li a:hover {
+  background-color: #444;
+  border: none;
+}
+
+/* Slider Portion */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.pic-ctn {
+  width: 100vw;
+  height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
   }
-  
-  .w3-bar-item {
-    padding: 8px 16px; /* Padding around the items */
-    text-align: left; /* Left-align text */
-    font-size: 18px; /* Font size for readability */
-    color: white; /* White font color */
-    text-decoration: none; /* Remove underline from links */
-    display: block; /* Make each item a block-level element */
+  10% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .w3-bar-item:hover {
-    background-color: #414141; /* Darker gray on hover */
-    border: none;
+  20% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  /* Style for the close button */
-  .w3-button.w3-teal.w3-xlarge {
-    color: white; /* White color for the button */
-    background-color: #545454; /* Dark gray background for the button */
-    border: none; /* Remove border */
-    cursor: pointer; /* Pointer cursor on hover */
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
   }
-  
-  /* Page Content */
-  .w3-teal {
-    background-color: #b3b3b3; 
-    padding: 20px;
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
   }
-  
-  .w3-container {
-    margin-left: 20px; /* Adjust content to make space for sidebar */
-    padding: 20px;
-  }
-  
-  /* Close button styles when sidebar is open */
-  .w3-bar-item.w3-button {
-    padding: 15px;
-  }
-  
-  
+}
+
+.pic-ctn {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 15vh;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
