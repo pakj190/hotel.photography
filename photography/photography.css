@@ -221,9 +221,12 @@ body {
     text-align: center;
 }
 
+/* Set the images to be squares (same width and height) */
 .img-buttons img {
-    width: 100%;
-    height: auto;
+    width: 100%;  /* Set the width to 100% of the parent container */
+    height: 100%;  /* Set the height to 100% to make it a square */
+    object-fit: cover;  /* Ensure the image covers the whole square */
+    aspect-ratio: 1 / 1; /* Ensures the image is always a square */
     display: block;
 }
 
