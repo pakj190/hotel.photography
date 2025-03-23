@@ -105,7 +105,7 @@ p {
   border: none;
 }
 
-/* image flip boxes on bottom */
+/* images with descriptions on the bottom of screen */
 * {
   margin: 0;
   padding: 0;
@@ -113,14 +113,16 @@ p {
 
 .container {
   position: relative;
-  width: 1160px;
+  width: 100%; /* Ensure it takes full width of the parent container */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   transform-style: preserve-3d;
   perspective: 500px;
   margin: auto;
+  gap: 20px; /* Adds spacing between the boxes */
 }
+
 .container .box {
   position: relative;
   width: 275px;
@@ -132,17 +134,21 @@ p {
   margin-right: 15px;
   margin-top: 45px;
 }
+
 .container:hover .box {
   transform: rotateY(25deg);
 }
+
 .container .box:hover ~ .box {
   transform: rotateY(-25deg);
 }
+
 .container .box:hover {
   transform: rotateY(0deg) scale(1.25);
   z-index: 1;
-  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
 }
+
 .container .box .imgBx {
   position: absolute;
   top: 0;
@@ -150,6 +156,7 @@ p {
   width: 100%;
   height: 100%;
 }
+
 .container .box .imgBx:before {
   content: '';
   position: absolute;
@@ -157,15 +164,17 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,#f00,#000);
+  background: linear-gradient(180deg, #f00, #000);
   z-index: 1;
   opacity: 0;
   transition: 0.5s;
   mix-blend-mode: multiply;
 }
+
 .container .box:hover .imgBx:before {
   opacity: 1;
 }
+
 .container .box .imgBx img {
   position: absolute;
   top: 0;
@@ -174,6 +183,7 @@ p {
   height: 100%;
   object-fit: cover;
 }
+
 .container .box .content {
   position: absolute;
   top: 0;
@@ -186,6 +196,7 @@ p {
   align-items: flex-end;
   box-sizing: border-box;
 }
+
 .container .box .content h2 {
   color: #fff;
   transition: 0.5s;
@@ -195,9 +206,11 @@ p {
   transform: translateY(200px);
   transition-delay: 0.3s;
 }
+
 .container .box:hover .content h2 {
   transform: translateY(0px);
 }
+
 .container .box .content p {
   color: #fff;
   transition: 0.5s;
@@ -205,6 +218,36 @@ p {
   transform: translateY(200px);
   transition-delay: 0.4s;
 }
+
 .container .box:hover .content p {
   transform: translateY(0px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* For medium-sized screens like tablets */
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .container .box {
+    width: 45%;
+    height: 250px; /* Optional: Resize the boxes for medium screens */
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For small screens like smartphones */
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container .box {
+    width: 100%;
+    height: 200px; /* Optional: Resize the boxes for small screens */
+    margin: 10px 0;
+  }
 }

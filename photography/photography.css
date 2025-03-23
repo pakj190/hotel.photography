@@ -209,3 +209,34 @@ body {
     transform: translateY(0px);
   }
   
+/* photo buttons */
+.img-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns by default */
+    gap: 10px;
+}
+
+.img-buttons .img-button {
+    display: block;
+    text-align: center;
+}
+
+.img-buttons img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* For smaller screens: 2x3 grid */
+@media (max-width: 768px) {
+    .img-buttons {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+    }
+}
+
+/* For even smaller screens: 1x6 grid (all images in one column) */
+@media (max-width: 480px) {
+    .img-buttons {
+        grid-template-columns: 1fr;  /* 1 column */
+    }
+}
