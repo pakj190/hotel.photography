@@ -51,7 +51,9 @@ p {
     letter-spacing: 1px;
     font-size: 20px;
     transition: transform 0.3s ease-in-out; /* Smooth transition when opening/closing */
+    z-index: 9999; /* Ensure the sidebar is in front of other elements */
 }
+
 
 .w3-bar-item {
     padding: 10px;
