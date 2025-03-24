@@ -30,26 +30,6 @@
         But on top of school, she is a part time photographer and part time content creator. 
         Traveling, crocheting and eating at cute cafes are some of her favorite things to do. 
     </div>
-    
-    <div class="slideshow-container">
-      <!-- First Image (Food) -->
-      <div class="mySlides">
-        <a href="food.html">
-          <p class="image-label">Food</p>
-          <img src="photography/food/ikseon.JPG" alt="Food Image" class="slide-image">
-        </a>
-      </div>
-      
-      <!-- Second Image (Travel) -->
-      <div class="mySlides">
-        <a href="travel.html">
-          <p class="image-label">Travel</p>
-          <img src="photography/travel/vegas/flamingohotel.JPG" alt="Travel Image" class="slide-image">
-        </a>
-      </div>
-    </div>
-    
-
 
     <div class="container">
       <div class="box">
@@ -137,30 +117,6 @@
       }
 
     </script>
-<script>
-  let slideIndex = 0;
-
-  function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
-    
-    // Hide all images initially
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-
-    // Show the current image
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }    
-
-    slides[slideIndex - 1].style.display = "block";  // Display the current image
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-  }
-
-  // Start the slideshow
-  showSlides();
-</script>
-
-      
 
   </body>
 </html>
