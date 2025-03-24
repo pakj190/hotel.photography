@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sports Photography</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+<!-- Back Button -->
+<a href="../photography.html" class="back-btn">&#8592; Back</a>
+
+    <h1>Sports Photography</h1>
+    <!-- Page Content -->
+    <h2>Volleyball Game</h2>
+    <div class="image-grid">
+        <!-- Row 1 -->
+        <div class="image-item" onclick="openImage('eataly.JPG')">
+            <img src="group-min.jpg" alt="Image 1">
+        </div>
+        <div class="image-item" onclick="openImage('kyuramen.JPG')">
+            <img src="block-min.jpg" alt="Image 2">
+        </div>
+        <div class="image-item" onclick="openImage('hernameishan.JPG')">
+            <img src="hernameishan.JPG" alt="Image 3">
+        </div>
+        <div class="image-item" onclick="openImage('ikseon.JPG')">
+            <img src="ikseon.JPG" alt="Image 4">
+        </div>
+        <div class="image-item" onclick="openImage('kyuramen2.JPG')">
+            <img src="kyuramen2.JPG" alt="Image 5">
+        </div>
+        <div class="image-item" onclick="openImage('manan.JPG')">
+            <img src="manan.JPG" alt="Image 6">
+        </div>
+        <div class="image-item" onclick="openImage('maud.JPG')">
+            <img src="maud.JPG" alt="Image 7">
+        </div>
+        <div class="image-item" onclick="openImage('outro.JPG')">
+            <img src="outro.JPG" alt="Image 8">
+        </div>
+        <div class="image-item" onclick="openImage('rubys.JPG')">
+            <img src="rubys.JPG" alt="Image 9">
+        </div>
+    </div>
+
+    <!-- Image Overlay for Enlarged Image -->
+    <div class="image-overlay" id="image-overlay" onclick="closeImage()">
+        <img id="enlarged-image" src="" alt="Enlarged Image">
+    </div>
+
+    <p class="copyright">All images are Joanna Pak's original images and are not available for download or commercial use.</p>
+
+    <!-- JavaScript to control image enlargement -->
+    <script>
+      // Function to open the enlarged image
+      function openImage(imageSrc) {
+          var overlay = document.getElementById('image-overlay');
+          var enlargedImage = document.getElementById('enlarged-image');
+          enlargedImage.src = imageSrc; // Set the source of the enlarged image
+          overlay.classList.add('active'); // Show the overlay
+      }
+
+      // Function to close the enlarged image
+      function closeImage() {
+          var overlay = document.getElementById('image-overlay');
+          overlay.classList.remove('active'); // Hide the overlay
+      }
+
+    </script>
+
+  </body>
+</html>
