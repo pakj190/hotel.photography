@@ -3,9 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
-  }
-  
-  h1 {
+}
+
+h1 {
     font-family: "Duru Sans", sans-serif;
     font-size: 80px;
     margin-left: 20px;
@@ -13,32 +13,32 @@ body {
     letter-spacing: 10px;
     padding: 10px;
     margin-top: 10px;
-  }
-  
-  p {
+}
+
+p {
     font-family: "Radley", serif;
     line-height: 30px;
     text-align: center;
     margin: 20px;
     font-size: 20px;
-  }
-  
-  .copyright {
+}
+
+.copyright {
     color: rgb(182, 182, 182);
     font-size: 12px;
-  }
-  
-  .w3-teal {
+}
+
+.w3-teal {
     background-color: #5d5d5d; /* You can change this if you want a different header color */
     color: white;
-  }
-  
-  .w3-container {
+}
+
+.w3-container {
     padding: 20px;
-  }
-  
-  /* Sidebar Styling */
-  .w3-sidebar {
+}
+
+/* Sidebar Styling */
+.w3-sidebar {
     width: 250px;
     height: 100%;
     position: fixed;
@@ -51,165 +51,61 @@ body {
     letter-spacing: 1px;
     font-size: 20px;
     transition: transform 0.3s ease-in-out; /* Smooth transition when opening/closing */
-  }
-  
-  .w3-bar-item {
+}
+
+.w3-bar-item {
     padding: 10px;
     color: rgb(189, 189, 189); /* Ensure the text color is white */
     border: none;
     color: black;
-  }
-  
-  .w3-bar-item:hover {
+}
+
+.w3-bar-item:hover {
     background-color: #6b0079; /* Darker shade on hover */
     border: none;
     color: white;
-  }
-  
-  /* Sidebar Button */
-  .w3-button {
+}
+
+/* Sidebar Button */
+.w3-button {
     background-color: #8e8e8e; /* Teal color for buttons */
     color: white;
     padding: 10px;
     text-align: center;
     border: none;
-  }
-  
-  .w3-button:hover {
+}
+
+.w3-button:hover {
     background-color: #6b0079; /* Darker teal on hover */
-  }
-  
-  .w3-xlarge {
+}
+
+.w3-xlarge {
     font-size: 30px;
-  }
-  
-  /* Sidebar tabs */
-  .sidebar-tabs {
+}
+
+/* Sidebar tabs */
+.sidebar-tabs {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .sidebar-tabs li {
+}
+
+.sidebar-tabs li {
     padding: 12px;
     text-align: left;
-  }
-  
-  .sidebar-tabs li a {
+}
+
+.sidebar-tabs li a {
     color: white;
     text-decoration: none;
     border: none;
-  }
-  
-  .sidebar-tabs li a:hover {
+}
+
+.sidebar-tabs li a:hover {
     background-color: #444;
     border: none;
-  }
-  
-  /* image flip boxes on bottom */
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    position: relative;
-    width: 1160px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    transform-style: preserve-3d;
-    perspective: 500px;
-    margin: auto;
-  }
-  .container .box {
-    position: relative;
-    width: 275px;
-    height: 275px;
-    background: #000;
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    overflow: hidden;
-    margin-right: 15px;
-    margin-top: 45px;
-  }
-  .container:hover .box {
-    transform: rotateY(25deg);
-  }
-  .container .box:hover ~ .box {
-    transform: rotateY(-25deg);
-  }
-  .container .box:hover {
-    transform: rotateY(0deg) scale(1.25);
-    z-index: 1;
-    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
-  }
-  .container .box .imgBx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .container .box .imgBx:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg,#f00,#000);
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s;
-    mix-blend-mode: multiply;
-  }
-  .container .box:hover .imgBx:before {
-    opacity: 1;
-  }
-  .container .box .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .container .box .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    padding: 20px;
-    align-items: flex-end;
-    box-sizing: border-box;
-  }
-  .container .box .content h2 {
-    color: #fff;
-    transition: 0.5s;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    font-size: 20px;
-    transform: translateY(200px);
-    transition-delay: 0.3s;
-  }
-  .container .box:hover .content h2 {
-    transform: translateY(0px);
-  }
-  .container .box .content p {
-    color: #fff;
-    transition: 0.5s;
-    font-size: 14px;
-    transform: translateY(200px);
-    transition-delay: 0.4s;
-  }
-  .container .box:hover .content p {
-    transform: translateY(0px);
-  }
-  
-/* photo buttons */
+}
+
+/* Image buttons styling */
 .img-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);  /* 3 columns by default */
@@ -218,7 +114,9 @@ body {
 
 .img-buttons .img-button {
     display: block;
-    text-align: center;
+    position: relative;
+    overflow: hidden;  /* Hide any content that overflows */
+    width: 100%;  /* Ensure button takes up full space */
 }
 
 /* Set the images to be squares (same width and height) */
@@ -228,6 +126,31 @@ body {
     object-fit: cover;  /* Ensure the image covers the whole square */
     aspect-ratio: 1 / 1; /* Ensures the image is always a square */
     display: block;
+    transition: opacity 0.3s ease; /* Smooth fade on hover */
+}
+
+/* On hover, darken the image */
+.img-buttons .img-button:hover img {
+    opacity: 0.6;  /* Darken the image */
+}
+
+/* Text overlay */
+.img-buttons .img-button .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(31, 31, 31);
+    font-family: "Duru Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Fade-in transition */
+}
+
+.img-buttons .img-button:hover .overlay {
+    opacity: 1;  /* Make the text visible when hovering */
 }
 
 /* For smaller screens: 2x3 grid */
