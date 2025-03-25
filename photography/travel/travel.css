@@ -41,13 +41,16 @@ body {
 /* Header Styling */
 h1 {
     font-family: "Duru Sans", sans-serif;
-    font-size: 80px;
+    font-size: 70px;
     margin: 20px;
     text-align: center;
     letter-spacing: 10px;
     padding: 10px;
 }
 
+h2 {
+    font-family: "Duru Sans", sans-serif;
+}
 /* Paragraph Styling */
 p {
     font-family: "Radley", serif;
@@ -57,6 +60,19 @@ p {
     font-size: 20px;
 }
 
+@media only screen and (max-width: 500px) {
+    /* Your styles for screens with a max width of 500px */
+    h1 {
+      font-size: 30px;/* Example: Change background color */
+    }
+    p {
+      font-size: 15px;
+    }
+    }
+    h2 {
+        font-size: 20px;
+    }
+  
 /* Copyright Styling */
 .copyright {
     color: rgb(182, 182, 182);
