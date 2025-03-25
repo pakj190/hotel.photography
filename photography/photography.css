@@ -28,6 +28,16 @@ p {
     font-size: 12px;
 }
 
+@media only screen and (max-width: 500px) {
+    /* Your styles for screens with a max width of 500px */
+    h1 {
+      font-size: 30px;/* Example: Change background color */
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  
 .w3-teal {
     background-color: #5d5d5d; /* You can change this if you want a different header color */
     color: white;
