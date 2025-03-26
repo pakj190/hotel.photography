@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Photography Portfolio</title>
+    
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="index.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Radley:ital@0;1&display=swap" rel="stylesheet">
-
+    
+    <!-- Font links from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Radley:ital@0;1&display=swap" rel="stylesheet" />
   </head>
 
   <body>
-
-    
-
-    <!-- Page Content -->
+    <!-- Header Section -->
     <div class="w3-teal">
       <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
       <div class="w3-container">
@@ -24,66 +23,57 @@
       </div>
     </div>
 
+    <!-- Introduction Section -->
     <div class="w3-container">
-      <p>Joanna is an artist based in New York City and New Jersey. 
-        She attends Parsons School of Design, a top design school in the world, and is studying Communication Design.
-        But on top of school, she is a part time photographer and part time content creator. 
-        Traveling, crocheting and eating at cute cafes are some of her favorite things to do. 
+      <p>
+        Joanna is an artist based in New York City and New Jersey. She attends Parsons School of Design, a top design school in the world, and is studying Communication Design. But on top of school, she is a part-time photographer and content creator. Traveling, crocheting, and eating at cute cafes are some of her favorite things to do.
+      </p>
     </div>
-    
 
+    <!-- Portfolio Section -->
     <div class="container">
       <div class="box">
         <div class="imgBx">
-          <img src="homepage/SeoulSearch-min.JPG" alt="Seoul Search Image">
+          <img src="homepage/SeoulSearch-min.JPG" alt="Seoul Search Image" />
         </div>
         <div class="content">
-          <div>
-            <h2>Seoul, South Korea</h2>
-            <p>Although late night, the South Korean grandmother works to keep her shop up for those who may pass by.
-            </p>
-          </div>
+          <h2>Seoul, South Korea</h2>
+          <p>Although late night, the South Korean grandmother works to keep her shop up for those who may pass by.</p>
         </div>
       </div>
+
       <div class="box">
         <div class="imgBx">
-          <img src="homepage/labeach-min.JPG" alt="beach">
+          <img src="homepage/labeach-min.JPG" alt="Beach" />
         </div>
         <div class="content">
-          <div>
-            <h2>Los Angeles, California</h2>
-            <p>The streets of Dontonbori, Osaka is known for their freshly made Takoyaki balls.
-            </p>
-          </div>
+          <h2>Los Angeles, California</h2>
+          <p>Gorgeous beach on the coast of California.</p>
         </div>
       </div>
+
       <div class="box">
         <div class="imgBx">
-          <img src="homepage/foggynyc-min.jpg" alt="takoyaki">
+          <img src="homepage/foggynyc-min.jpg" alt="Foggy NYC" />
         </div>
         <div class="content">
-          <div>
-            <h2>New York, New York</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
-            </p>
-          </div>
+          <h2>New York, New York</h2>
+          <p>A foggy day in the city where the buildings are covered and shy.</p>
         </div>
       </div>
+
       <div class="box">
         <div class="imgBx">
-          <img src="homepage/JapanStreets-min.JPG" alt="takoyaki">
+          <img src="homepage/JapanStreets-min.JPG" alt="Osaka Streets" />
         </div>
         <div class="content">
-          <div>
-            <h2>Osaka, Japan</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
-            </p>
-          </div>
+          <h2>Osaka, Japan</h2>
+          <p>The beautiful streets of Osaka in the daytime in a residential area.</p>
         </div>
       </div>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar Section -->
     <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
       <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
       <ul class="sidebar-tabs">
@@ -98,14 +88,24 @@
             <li><a href="photography/studio.html">Studio</a></li>
             <li><a href="photography/product.html">Product</a></li>
             <li><a href="hotel/hotel.html">Hotel</a></li>
-
           </ul>
         </li>
         <li><a href="https://pakj190.myportfolio.com/" target="_blank">Art Portfolio</a></li>
         <li><a href="socials/socials.html">Contact Me</a></li>
       </ul>
     </div>
-    
+
+        <!-- Bottom Icons Section -->
+        <div class="socials">
+          <a href="socials/socials.html">
+            <img src="socials/icon.png" alt="Social Icon 1" class="social-icon" />
+          </a>
+          <a href="socials/socials.html">
+            <img src="socials/linkedin.png" alt="LinkedIn Icon" class="social-icon" />
+          </a>
+        </div>
+
+    <!-- Copyright Section -->
     <p class="copyright">All images are Joanna Pak's original images and are not available for download or commercial use.</p>
 
     <!-- JavaScript to control sidebar -->
@@ -117,32 +117,30 @@
       function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
       }
-
     </script>
-<script>
-  let slideIndex = 0;
 
-  function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
-    
-    // Hide all images initially
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
+    <!-- Slideshow JavaScript -->
+    <script>
+      let slideIndex = 0;
 
-    // Show the current image
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }    
+      function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
 
-    slides[slideIndex - 1].style.display = "block";  // Display the current image
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-  }
+        // Hide all images initially
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
 
-  // Start the slideshow
-  showSlides();
-</script>
+        // Show the current image
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }    
 
-      
+        slides[slideIndex - 1].style.display = "block";  // Display the current image
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
 
+      // Start the slideshow
+      showSlides();
+    </script>
   </body>
 </html>

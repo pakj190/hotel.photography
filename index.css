@@ -320,3 +320,20 @@ p {
 a {
   text-decoration: none; /* Remove underline */
 }
+
+/* Styling for the social icons */
+.socials {
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  gap: 20px; /* Space between icons */
+  margin-top: 20px; /* Adds some space from the content above */
+  margin-bottom: 20px; /* Adds space at the bottom */
+}
+
+.social-icon {
+  width: 40px; /* Small icon size */
+  height: 40px;
+  cursor: pointer; /* Indicates they are clickable */
+  transition: transform 0.3s ease-in-out;
+}
+
