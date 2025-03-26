@@ -124,7 +124,9 @@ p {
 /* Media Query for screens smaller than 480px (smartphones) */
 @media (max-width: 480px) {
     .image-grid {
-        grid-template-columns: 1fr; /* 1 image per row */
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+        img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+
     }
 }
 

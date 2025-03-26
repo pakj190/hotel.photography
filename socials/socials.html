@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Social Media</title>
+    <link rel="stylesheet" href="socials.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Page Content -->
+    <div class="w3-teal">
+      <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+      <div class="w3-container">
+        <h1>Social Media</h1>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h2>Contact me:</h2>
+      <p>yeinpak.x@gmail.com</p>
+    </div>
+
+    <div class="social-pages">
+        <div class="social-item">
+          <!-- Image wrapped in an anchor tag to make it clickable -->
+          <a href="https://www.instagram.com/yein.pak?igsh=cDd5YXVkbW1oOXUx" target="_blank">
+            <img src="instass.jpg" alt="Instagram" />
+          </a>
+          <div class="social-info">
+            <h3>Instagram: @yein.pak</h3>
+          </div>
+        </div>
+      
+        <div class="social-item">
+          <!-- Image wrapped in an anchor tag to make it clickable -->
+          <a href="https://www.linkedin.com/in/joanna-pak-852642327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+            <img src="linkedin.jpeg" alt="LinkedIn" />
+          </a>
+          <div class="social-info">
+            <h3>LinkedIn</h3>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <ul class="sidebar-tabs">
+        <li><a href="../index.html">Homepage</a></li>
+
+        <!-- Photography with Dropdown -->
+        <li class="dropdown">
+          <a href="../photography/photography.html">Photography</a>
+          <ul class="dropdown-menu">
+            <li><a href="photography/travel/travel.html">Travel</a></li>
+            <li><a href="photography/food/food.html">Food</a></li>
+            <li><a href="photography/events.html">Events</a></li>
+            <li><a href="photography/sports/sports.html">Sports</a></li>
+            <li><a href="photography/studio.html">Studio</a></li>
+            <li><a href="photography/product.html">Product</a></li>
+            <li><a href="hotel/hotel.html">Hotel</a></li>
+          </ul>
+        </li>
+        <li><a href="https://pakj190.myportfolio.com/" target="_blank">Art Portfolio</a></li>
+        <li><a href="socials/socials.html">Socials</a></li>
+      </ul>
+    </div>
+
+    <p class="copyright">All images are Joanna Pak's original images and are not available for download or commercial use.</p>
+
+    <!-- JavaScript to control sidebar -->
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

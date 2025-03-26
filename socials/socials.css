@@ -1,0 +1,248 @@
+/* General Styling */
+body {
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  h1, h2, h3, p {
+    text-align: center; /* Center text horizontally */
+    margin: 0; /* Remove default margin */
+  }
+  
+  h1 {
+    font-family: "Duru Sans", sans-serif;
+    font-size: 80px;
+    letter-spacing: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  h2 {
+    font-family: "Duru Sans", sans-serif;
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-family: "Duru Sans", sans-serif;
+    font-size: 20px;
+  }
+  
+  p {
+    font-family: "Radley", serif;
+    line-height: 30px;
+    margin: 20px;
+    font-size: 20px;
+  }
+  
+  /* Social Pages */
+  .social-pages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns for larger screens */
+    gap: 10px; /* Adds space between the columns */
+    margin-left: 40px;
+  }
+  
+  .social-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* First column for the image, second for the text */
+    gap: 20px;
+    align-items: center; /* Aligns the content vertically */
+  }
+
+  .social-item a img {
+    cursor: pointer; /* Changes the cursor to indicate a clickable element */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  }
+  
+  .social-item a img:hover {
+    transform: scale(1.05); /* Slightly zooms in on hover */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .social-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .social-info a {
+    margin-top: 5px;
+    text-decoration: none;
+    color: #0077b5; /* LinkedIn color for the link */
+  }
+  
+  .social-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Copyright Styling */
+  .copyright {
+    color: rgb(182, 182, 182);
+    font-size: 12px;
+  }
+  
+  /* Media Queries */
+  
+  /* For smaller screens (max-width: 768px) */
+  @media (max-width: 468px) {
+    .social-pages {
+      grid-template-columns: 1fr; /* Makes the grid a single column */
+    }
+  
+    .social-item {
+      grid-template-columns: 1fr; /* Stacks the image and text in one column */
+      gap: 10px; /* Reduces the gap between items */
+    }
+  
+    .social-info h3 {
+      font-size: 1.1em; /* Slightly smaller font size for smaller screens */
+    }
+  
+    .social-info a {
+      font-size: 0.95em; /* Slightly smaller link font for smaller screens */
+    }
+  }
+  
+  /* For very small screens (max-width: 500px) */
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 30px; /* Adjust font size for h1 */
+    }
+  
+    h2 {
+      font-size: 20px; /* Adjust font size for h2 */
+    }
+  
+    h3 {
+      font-size: 15px;
+    }
+  
+    p {
+      font-size: 15px; /* Adjust font size for p */
+    }
+  }
+  
+  /* W3 Styling */
+  .w3-teal {
+    background-color: #5d5d5d; /* You can change this if you want a different header color */
+    color: white;
+  }
+  
+  .w3-container {
+    padding: 20px;
+  }
+  
+  /* Sidebar Styling */
+  .w3-sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333; /* Dark gray background */
+    color: white; /* White text color */
+    display: none; /* Sidebar is hidden by default */
+    font-family: "Duru Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition when opening/closing */
+    z-index: 9999; /* Ensure the sidebar is in front of other elements */
+  }
+  
+  .w3-bar-item {
+    padding: 10px;
+    color: rgb(189, 189, 189); /* Ensure the text color is white */
+    border: none;
+    color: black;
+  }
+  
+  .w3-bar-item:hover {
+    background-color: #6b0079; /* Darker shade on hover */
+    border: none;
+    color: white;
+  }
+  
+  /* Sidebar Button */
+  .w3-button {
+    background-color: #8e8e8e; /* Teal color for buttons */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: none;
+  }
+  
+  .w3-button:hover {
+    background-color: #6b0079; /* Darker teal on hover */
+  }
+  
+  .w3-xlarge {
+    font-size: 30px;
+  }
+  
+  /* Sidebar tabs */
+  .sidebar-tabs {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-tabs li {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .sidebar-tabs li a {
+    color: white;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .sidebar-tabs li a:hover {
+    background-color: #444;
+    border: none;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #444;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .dropdown-menu li {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #6b0079; /* Darker shade on hover */
+  }
+  
+  /* Show dropdown when hovering over the parent link */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
