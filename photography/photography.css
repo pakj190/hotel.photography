@@ -178,3 +178,40 @@ p {
         grid-template-columns: 1fr;  /* 1 column */
     }
 }
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #444;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .dropdown-menu li {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #6b0079; /* Darker shade on hover */
+  }
+  
+  /* Show dropdown when hovering over the parent link */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
