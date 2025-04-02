@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    flex-direction: column; /* Allow for vertical layout */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px; /* Adjust the max-width as needed */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-item img {
+    width: 100%; /* Keep the original ratio */
+    height: auto;
+    max-width: 150px; /* Optional, if you want to limit the max size */
+}
+
+.caption {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+/* Header Styling */
+h1 {
+    font-family: "Duru Sans", sans-serif;
+    font-size: 70px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 10px;
+}
+
+h2 {
+    font-family: "Duru Sans", sans-serif;
+}
+/* Paragraph Styling */
+p {
+    font-family: "Radley", serif;
+    line-height: 30px;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    /* Your styles for screens with a max width of 500px */
+    h1 {
+      font-size: 30px;/* Example: Change background color */
+    }
+    p {
+      font-size: 15px;
+    }
+    }
+    h2 {
+        font-size: 20px;
+    }
+  
+/* Copyright Styling */
+.copyright {
+    color: rgb(182, 182, 182);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Fullscreen overlay for enlarged image */
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-overlay.active {
+    display: flex; /* Show when active */
+}
+
+.image-overlay img {
+    max-width: 80%; /* Limit image width */
+    max-height: 80%; /* Limit image height */
+    transition: transform 0.3s ease-in-out;
+}
+.image-item {
+    cursor: pointer; /* Show pointer cursor */
+}
+
+.image-item img {
+    width: 100%; /* Make the image take up 100% of its container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Increase this value to make the images bigger */
+}
+
+/* Media Query for screens smaller than 768px (tablets and small laptops) */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    }
+}
+
+/* Media Query for screens smaller than 480px (smartphones) */
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+        img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+
+    }
+}
+
+/* Style the Back Button */
+.back-btn {
+    position: fixed; /* Fixed position so it stays at the top left corner */
+    top: 20px; /* Distance from the top of the page */
+    left: 20px; /* Distance from the left side of the page */
+    padding: 10px 15px; /* Add some padding to make it look nice */
+    background-color: #333; /* Dark background color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Show the pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for the back button */
+.back-btn:hover {
+    background-color: #555; /* Change background color on hover */
+}
